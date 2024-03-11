@@ -1,0 +1,56 @@
+1.Buatlah program perkalian sederhana
+program perkalian;
+uses crt;
+var
+a,b,hasil:real;
+begin
+clrscr;
+writeln (' Nama :Dea Andini ');
+writeln ('Nim :2310431022');
+writeln ('program perkalian');
+writeln ('-----------------');
+writeln ('masukkan nilai a=');
+readln(a);
+writeln('masukkan nilai b=');
+readln(b);
+hasil:=a*b;
+writeln('hasil=',hasil);
+end.
+2.buatlah program menghitung volume bola yang jari-jarinya diinput dari keyboard
+program volumebola;
+uses crt;
+var
+jari_jari,volume,phi :real;
+begin
+clrscr;
+writeln (' Nama :dea andini');
+writeln ('Nim:2310431022');
+writeln ('program mencari volume balok');
+writeln ('------------');
+writeln ('masukkan jari_jari=');
+readln (jari_jari);
+WriteLn('masukkan phi ');
+ReadLn(phi);
+volume:=4/3*jari_jari*jari_jari*phi;
+writeln ('masukkan volume = ',volume);
+end.
+3.Buatlah program menghitung luas permukaan balok,semua elemen yang dibutuhkan diinput dari keyboard
+program luaspermukaanbalok;
+uses crt;
+var
+panjang,lebar,tinggi,luas:real;
+begin
+clrscr;
+writeln ( 'Nama :Dea Andini ');
+writeln ('Nim :2310431022');
+writeln ('Program menghitung luas permukaan balok');
+writeln ('--------------');
+writeln ('masukkan panjang =');
+readln (panjang);
+writeln ('masukkan lebar=');
+readln (lebar);
+writeln ('masukkan tinggi=');
+readln (tinggi);
+luas := 2*panjang*lebar+2*panjang*tinggi+2*lebar*tinggi;
+writeln  ('luas = ',luas);
+end.
