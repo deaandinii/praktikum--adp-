@@ -1,0 +1,79 @@
+python :
+nama = input("Masukkan nama anda: ")
+umur = int(input("Masukkan umur anda: "))
+jenis_kelamin = input("Masukkan jenis kelamin anda: ")
+print("1. Aceh")
+print("2. Bali")
+print("3. Bogor")
+tujuan = int(input("Masukkan pilihan tujuan 1/2/3: "))
+print("Pilih jenis maskapai")
+print("1. Ekonomi")
+print("2. Bisnis")
+print("3. First class")
+jenis_maskapai = int(input("Masukkan pilihan jenis maskapai (1/2/3): "))
+harga = 0
+jumlah_kursi = int(input("Masukkan jumlah kursi yang dipesan: "))
+if jumlah_kursi > 3:
+    harga = 1000 * jumlah_kursi * 0.75
+else:
+    harga = 1000 * jumlah_kursi
+print("==================")
+print("Struk Pemesanan")
+print("Nama:", nama)
+print("Umur:", umur)
+print("Jenis Kelamin:", jenis_kelamin)
+if tujuan == 1:
+    print("Tujuan: Aceh")
+elif tujuan == 2:
+    print("Tujuan: Bali")
+elif tujuan == 3:
+    print("Tujuan: Bogor")
+if jenis_maskapai == 1:
+    print("Jenis Maskapai: Ekonomi")
+elif jenis_maskapai == 2:
+    print("Jenis Maskapai: Bisnis")
+elif jenis_maskapai == 3:
+    print("Jenis Maskapai: First class")
+print("Jumlah Kursi:", jumlah_kursi)
+print("Harga:", harga)
+print("=====================")
+
+
+
+aplikasi pascal:
+
+program PembelianTiketPesawat;
+uses crt;
+var
+  nama, umur, jenis_kelamin, tujuan_keberangkatan, jenis_maskapai: string;
+  jumlah_tiket, harga_per_tiket, total_harga: integer;
+begin
+  clrscr;
+  writeln('Pembelian tiket pesawat');
+  writeln('=======================');
+  write('Masukkan nama Anda:');
+  readln(nama);
+  write('Masukkan umur Anda:');
+  readln(umur);
+  write('Masukkan jenis kelamin Anda:');
+  readln(jenis_kelamin);
+  write('Masukkan tujuan keberangkatan (aceh/bali/bogor):');
+  readln(tujuan_keberangkatan);
+  writeln('Pilih jenis maskapai:');
+  writeln('1. Ekonomi - $100');
+  writeln('2. Bisnis - $200');
+  writeln('3. First class - $300');
+  write('Jenis Maskapai : ');
+  readln(jenis_maskapai);
+case jenis_maskapai of
+    '1': harga_per_tiket := 100;
+    '2': harga_per_tiket := 200;
+    '3': harga_per_tiket := 300;
+  end;
+  write('Masukkan jumlah tiket yang dipesan:');
+  readln(jumlah_tiket);
+  total_harga := harga_per_tiket * jumlah_tiket;
+  writeln('Terima kasih, ', nama, ', telah melakukan pembelian tiket pesawat.');
+  writeln('Anda telah memesan ', jumlah_tiket, ' tiket dengan total harga $', total_harga, '.');
+  readln;
+end.
