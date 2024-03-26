@@ -1,0 +1,62 @@
+ program tabel_perulangan ;
+uses crt ;
+var menu, i,j,k,n:integer ;
+begin 
+writeln ('Nama : Dea Andini');
+writeln ('NIM : 2310431022') ;
+writeln ('Program pengkondisian') ;
+writeln ('-----------------------------------------') ;
+writeln ('Selamat Datang Di Program Pengkondisian') ;
+writeln ('|=======================================|') ;
+writeln ('|            Pilihan Menu               |') ;
+writeln ('|=======================================|') ;
+writeln ('|1.Tabel perkalian n x n                |') ;
+writeln ('|2.Tabel penjumlahan n x n              |') ;
+writeln ('|3.Keluar                               |') ;
+write ('Input Menu = ') ;
+readln (Menu) ;
+  if (menu = 1)then begin writeln ('tabel perkalian') ;
+ 
+  write ('Masukkan nilai n (1-10) =') ; readln (n) ;
+  writeln ('-----------------------') ;
+  writeln (' ') ;
+  write (' ') ;
+  for i := 1 to n do  
+  write (i:4,'|') ;
+  writeln ;
+ writeln ('-----------------------') ;
+ 
+ for i:=1 to n do 
+ begin 
+ write (i :3,'|') ;
+ for j := 1 to n do 
+ write ((i * j ) : 4,'|') ;
+ writeln ;
+ writeln ('-------------------------------') ;
+ end ;
+ end;
+ if (menu =2) then begin writeln ('tabel penjumlahan ') ;
+ write ('masukkan nilai n (1-10) = ') ; readln (n) ;
+ writeln ('------------------------------------') ;
+ writeln (' ') ;
+ write (' ') ;
+ for i := 1 to n do 
+ write (i:4,'|') ;
+ writeln ;
+ writeln ('-----------------------------') ;
+ 
+ for i := 1 to n do 
+ begin
+ write ( i:4,'|') ;
+ for j :=1 to n do
+ write ((i + j ) :4,'|') ;
+ writeln ;
+ end ;
+ end;
+ 
+ 
+ if (menu =3) then begin break ;
+ end;
+ 
+  readln ;
+ end.
