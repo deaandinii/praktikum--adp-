@@ -1,0 +1,51 @@
+tugas bilangan sempurna
+program programbilangansempurna;
+uses crt;
+var
+bilangan,faktor,jumlah,jumlahfaktor :integer ;
+begin
+clrscr ;
+writeln ('Nama : Dea Andini ');
+writeln('NIM :2310431022');
+writeln('program perulangan dan pengkondisian bersarang ');
+writeln('==============================================');
+writeln ('masukkan sebuah bilangan bulat positif :');
+readln(bilangan);
+jumlahfaktor:=0;
+for faktor :=1 to bilangan div 2 do
+begin
+if bilangan mod faktor=0 then
+jumlahfaktor:=jumlahfaktor + faktor;
+end;
+if jumlahfaktor =bilangan then
+writeln(bilangan,'adalah bilangan sempurna ')
+else
+writeln(bilangan,'adalah bukan bilangan sempurna ');
+if bilangan mod 2 = 0 then
+writeln(bilangan, 'adalah bilangan genap')
+else 
+writeln (bilangan,'adalah bilangan ganjil ');
+
+  
+  readln;
+end.
+
+
+
+
+tugas tinggi segitiga 
+def  cetak_segitiga (tinggi):
+     if tinggi <= 0 or not isinstance (tinggi,int):
+         print ("tinggi harus merupakan bilangan bulat positif.")
+         return
+     
+     
+     for i in range (1, tinggi + 1):
+         for j in range (1, i + 1):
+             print (j, end=" ")
+         print ()
+try :
+    tinggi = int(input("masukkan tinggi segitiga : "))
+    cetak_segitiga (tinggi)
+except ValueError :
+    print ("masukkan harus berupa bilangan bulat.")
