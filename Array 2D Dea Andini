@@ -1,0 +1,45 @@
+class MaskapaiPenerbangan:
+    def __init__(self, jadwal):
+        self.jadwal = jadwal
+
+    def tampilkan_jadwal(self):
+        print("Jadwal Penerbangan:")
+        print("----------------------------------------------------------------------------")
+        print("|   Kota Asal   |   Kota Tujuan   | Waktu Keberangkatan | Waktu Kedatangan |")
+        print("----------------------------------------------------------------------------")
+        for penerbangan in self.jadwal:
+            print("| {:^13} | {:^15} | {:^19} | {:^16} |".format(*penerbangan))
+        print("----------------------------------------------------------------------------")
+
+    def cari_rute_tercepat(self, asal, tujuan):
+        rute = []
+        for penerbangan in self.jadwal:
+            if penerbangan[0] == asal and penerbangan[1] == tujuan:
+                rute.append(penerbangan)
+
+        if not rute:
+            return "Tidak ada penerbangan langsung yang tersedia."
+
+        rute_tercepat = min(rute, key=lambda x: int(x[3].split(":")[0]) * 60 + int(x[3].split(":")[1]) - int(x[2].split(":")[0]) * 60 - int(x[2].split(":")[1]))
+        return "Rute tercepat dari {} ke {}: Waktu Keberangkatan: {}, Waktu Kedatangan: {}".format(
+            rute_tercepat[0], rute_tercepat[1], rute_tercepat[2], rute_tercepat[3])
+
+
+# Data jadwal penerbangan
+jadwal_penerbangan = [
+    ["Padang", "Aceh", "08:00", "10:00"],
+    ["Padang", "Jakarta", "09:00", "11:30"],
+    ["Aceh", "Jakarta", "10:30", "12:30"],
+    ["Jakarta", "Padang", "13:00", "15:00"],
+]
+
+# Buat objek MaskapaiPenerbangan
+maskapai = MaskapaiPenerbangan(jadwal_penerbangan)
+
+# Tampilkan jadwal penerbangan
+maskapai.tampilkan_jadwal()
+
+# Cari rute tercepat
+asal_kota = "Padang"
+tujuan_kota = "Jakarta"
+print(maskapai.cari_rute_tercepat(asal_kota, tujuan_kota))
