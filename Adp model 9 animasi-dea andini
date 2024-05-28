@@ -1,0 +1,43 @@
+kode program rumah
+from termcolor import colored
+
+# Fungsi untuk mencetak baris dengan warna dan latar belakang tertentu
+def print_colored(text, color, on_color):
+    print(colored(text, color, 'on_' + on_color))
+
+# Gambar rumah menggunakan karakter ASCII
+def print_house():
+    roof = [
+        "      ______      ",
+        "     /      \\     ",
+        "    /        \\    ",
+        "   /          \\   ",
+        "  /____________\\  ",
+    ]
+
+    walls = [
+        "  |            |  ",
+        "  |   ____     |  ",
+        "  |  |    |    |  ",
+        "  |  |____|    |  ",
+        "  |____________|  ",
+    ]
+
+    # Cetak atap dengan warna merah dan latar belakang hitam
+    for line in roof:
+        print_colored(line, 'red', 'black')
+
+    # Cetak dinding dengan warna hijau dan latar belakang hitam
+    for line in walls:
+        print_colored(line, 'green', 'black')
+
+# Panggil fungsi untuk mencetak rumah
+print_house()
+
+kode program bendera
+from termcolor import colored, cprint
+
+for i in range(5):
+	cprint(" "*50,"red","on_red")
+for i in range(5):
+	cprint(" "*50,"white","on_white")
